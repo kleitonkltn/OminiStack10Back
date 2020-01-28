@@ -61,7 +61,7 @@ module.exports = {
         }
 
     }, async show(req, res) {
-        const { github_username } = req.query
+        const { github_username } = req.params
         const dev = await Dev.findOne({ github_username })
         res.json(dev)
     },
